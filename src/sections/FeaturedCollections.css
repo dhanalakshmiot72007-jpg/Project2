@@ -1,0 +1,628 @@
+/* ==========================================================================
+   JEA JEWELLERY — FEATURED COLLECTIONS SECTION (DISCOVER OUR COLLECTIONS)
+   ========================================================================== */
+
+.jea-collections-section {
+  background-color: #FFFDF9;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 2.75rem 2.5rem 2.25rem 2.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.24);
+  box-shadow: 
+    0 20px 50px -15px rgba(74, 7, 24, 0.05),
+    0 4px 15px -5px rgba(0, 0, 0, 0.02),
+    0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+  transition: box-shadow 0.4s ease;
+}
+
+/* Ambient subtle luxury gold radial glows */
+.jea-collections-section::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -8%;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.065) 0%, rgba(247, 231, 206, 0.03) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.jea-collections-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -8%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(109, 16, 40, 0.04) 0%, rgba(159, 18, 57, 0.015) 50%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.jea-collections-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   SECTION HEADER (Heading, Subtitle, Dividers)
+   ========================================================================== */
+
+.jea-collections-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyebrow Label */
+.jea-collections-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #6D1028;
+  margin-bottom: 1.15rem;
+}
+
+.jea-collections-eyebrow-line {
+  width: 32px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #aa820a, #d4af37, transparent);
+  display: inline-block;
+}
+
+.jea-collections-eyebrow-sparkle {
+  color: #d4af37;
+  font-size: 0.8rem;
+}
+
+/* Main Section Heading */
+.jea-collections-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.35rem, 3.8vw, 3.65rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #1a1a1c;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+}
+
+/* Subtitle */
+.jea-collections-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(0.96rem, 1.25vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.7;
+  color: #6e6d7a;
+  max-width: 620px;
+  margin: 0 auto 1.5rem auto;
+  letter-spacing: 0.01em;
+}
+
+/* Decorative Divider with Diamond Gem */
+.jea-collections-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.jea-collections-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.45), transparent);
+}
+
+.jea-collections-divider-gem {
+  color: #aa820a;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   COLLECTION CARDS GRID & CARDS
+   ========================================================================== */
+
+.jea-collections-grid {
+  margin-bottom: 2rem;
+}
+
+.jea-collection-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(237, 232, 227, 0.95);
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 
+    0 12px 30px -10px rgba(34, 3, 11, 0.06),
+    0 4px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+  padding: 12px;
+}
+
+.jea-collection-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 
+    0 24px 50px -12px rgba(109, 16, 40, 0.16),
+    0 8px 20px -4px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   CARD IMAGE WRAPPER
+   ========================================================================== */
+
+.jea-collection-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #faf7f2;
+}
+
+.jea-collection-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
+}
+
+/* Subtle image zoom on hover */
+.jea-collection-card:hover .jea-collection-img {
+  transform: scale(1.06);
+}
+
+/* Vignette gradient */
+.jea-collection-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg, 
+    rgba(18, 18, 20, 0.22) 0%, 
+    transparent 30%, 
+    transparent 60%, 
+    rgba(18, 18, 20, 0.55) 100%
+  );
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.jea-collection-card:hover .jea-collection-vignette {
+  opacity: 0.9;
+}
+
+/* Top bar with Tag pill and Wishlist button */
+.jea-collection-card-topbar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.jea-collection-pill-tag {
+  background: rgba(255, 253, 249, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6D1028;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.jea-collection-fav-btn {
+  background: rgba(255, 253, 249, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6e6d7a;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.jea-collection-fav-btn:hover {
+  background: #ffffff;
+  color: #6D1028;
+  border-color: #6D1028;
+  transform: scale(1.1);
+}
+
+.jea-collection-fav-btn.is-active {
+  background: #6D1028;
+  color: #f7e7ce;
+  border-color: #6D1028;
+}
+
+.jea-collection-heart-icon {
+  font-size: 0.92rem;
+}
+
+/* Image Bottom Info */
+.jea-collection-img-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.jea-collection-count-badge {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f7e7ce;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.jea-collection-price-badge {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background: rgba(34, 3, 11, 0.65);
+  backdrop-filter: blur(4px);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================================================
+   CARD BODY & DETAILS
+   ========================================================================== */
+
+.jea-collection-body {
+  padding: 1.25rem 0.65rem 0.5rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.jea-collection-category-number {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #aa820a;
+  margin-bottom: 0.35rem;
+}
+
+.jea-collection-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: #1a1a1c;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.55rem;
+  transition: color 0.3s ease;
+}
+
+.jea-collection-card:hover .jea-collection-title {
+  color: #6D1028;
+}
+
+.jea-collection-description {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #6e6d7a;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   EXPLORE COLLECTION LINK WITH ARROW ICON
+   ========================================================================== */
+
+.jea-collection-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(237, 232, 227, 0.85);
+  margin-top: auto;
+}
+
+.jea-collection-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6D1028;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.jea-explore-text {
+  position: relative;
+}
+
+.jea-explore-text::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: #aa820a;
+  transition: width 0.35s ease;
+}
+
+.jea-collection-card:hover .jea-explore-text::after {
+  width: 100%;
+}
+
+.jea-explore-arrow {
+  font-size: 0.95rem;
+  color: #aa820a;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s ease;
+}
+
+.jea-collection-card:hover .jea-explore-arrow {
+  transform: translateX(5px);
+  color: #6D1028;
+}
+
+.jea-explore-corner-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #faf8f5;
+  color: #aa820a;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.jea-collection-card:hover .jea-explore-corner-icon {
+  background: #6D1028;
+  color: #f7e7ce;
+  border-color: #6D1028;
+  transform: translate(2px, -2px);
+}
+
+/* Bottom subtle gold accent line inside card */
+.jea-collection-card-accent-border {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
+  opacity: 0;
+  transform: scaleX(0.4);
+  transition: all 0.4s ease;
+}
+
+.jea-collection-card:hover .jea-collection-card-accent-border {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* ==========================================================================
+   ATELIER BESPOKE FOOTER CALLOUT
+   ========================================================================== */
+
+.jea-collections-bespoke-footer {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(247, 231, 206, 0.3) 0%, rgba(255, 253, 249, 0.9) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.jea-collections-bespoke-footer::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #aa820a, #6D1028);
+}
+
+.jea-bespoke-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.jea-bespoke-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.jea-bespoke-label {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #6D1028;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.jea-bespoke-heading {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #22030b;
+  margin-bottom: 0.4rem;
+}
+
+.jea-bespoke-sub {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: #6e6d7a;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.jea-bespoke-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #6D1028;
+  color: #FFFDF9;
+  padding: 13px 28px;
+  border-radius: 35px;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid #6D1028;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 8px 20px -4px rgba(109, 16, 40, 0.3);
+  white-space: nowrap;
+}
+
+.jea-bespoke-btn:hover {
+  background-color: #4a0718;
+  border-color: #aa820a;
+  color: #f7e7ce;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(109, 16, 40, 0.42);
+}
+
+.jea-bespoke-arrow {
+  font-size: 0.95rem;
+  transition: transform 0.3s ease;
+}
+
+.jea-bespoke-btn:hover .jea-bespoke-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .jea-collections-section {
+    padding: 2.5rem 2rem 2rem 2rem;
+  }
+  .jea-collections-heading {
+    font-size: 2.85rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .jea-collections-section {
+    padding: 2.25rem 1.5rem 2rem 1.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 20px;
+  }
+  .jea-collections-header {
+    margin-bottom: 1.75rem;
+  }
+  .jea-collections-heading {
+    font-size: 2.45rem;
+  }
+  .jea-bespoke-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .jea-collections-section {
+    padding: 1.5rem 1.15rem;
+    border-radius: 16px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .jea-collections-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    gap: 8px;
+  }
+  .jea-collections-eyebrow-line {
+    width: 20px;
+  }
+  .jea-collections-heading {
+    font-size: 2.1rem;
+  }
+  .jea-collections-subtitle {
+    font-size: 0.92rem;
+    margin-bottom: 1.15rem;
+  }
+  .jea-collection-card {
+    padding: 10px;
+  }
+  .jea-collection-title {
+    font-size: 1.3rem;
+  }
+  .jea-collection-description {
+    font-size: 0.82rem;
+  }
+  .jea-collections-bespoke-footer {
+    padding: 1.25rem 1rem;
+    margin-top: 1.5rem;
+  }
+  .jea-bespoke-heading {
+    font-size: 1.35rem;
+  }
+  .jea-bespoke-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

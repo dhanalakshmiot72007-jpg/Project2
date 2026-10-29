@@ -1,0 +1,594 @@
+/* ==========================================================================
+   JEA JEWELLERY — LUXURY ABOUT SECTION (HAUTE JOAILLERIE STORY)
+   ========================================================================== */
+
+.jea-about-section {
+  background-color: #FFFDF9;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 2.75rem 2.5rem 2.25rem 2.5rem;
+  border: 1px solid rgba(212, 175, 55, 0.24);
+  box-shadow: 
+    0 20px 50px -15px rgba(74, 7, 24, 0.05),
+    0 4px 15px -5px rgba(0, 0, 0, 0.02),
+    0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+  transition: box-shadow 0.4s ease;
+}
+
+/* Subtle luxury ambient gold watermark glow in background */
+.jea-about-section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, rgba(247, 231, 206, 0.03) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.jea-about-section::after {
+  content: '';
+  position: absolute;
+  bottom: -25%;
+  left: -10%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(109, 16, 40, 0.035) 0%, rgba(159, 18, 57, 0.015) 50%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.jea-about-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   LEFT COLUMN: JEWELLERY IMAGE & EDITORIAL ACCENTS
+   ========================================================================== */
+
+.jea-about-image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.jea-about-image-stage {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Decorative champagne-gold offset border frame */
+.jea-about-gold-frame {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  border-radius: 22px;
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.jea-about-image-card {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #faf7f2;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 
+    0 30px 65px -15px rgba(34, 3, 11, 0.16),
+    0 12px 28px -6px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 4 / 5;
+  z-index: 2;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease;
+}
+
+.jea-about-image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 36px 75px -15px rgba(34, 3, 11, 0.22),
+    0 16px 32px -6px rgba(0, 0, 0, 0.1);
+}
+
+.jea-about-image-stage:hover .jea-about-gold-frame {
+  transform: translate(-3px, -3px);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.jea-about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.jea-about-image-card:hover .jea-about-img {
+  transform: scale(1.04);
+}
+
+/* Subtle editorial vignette & caption bar on image */
+.jea-about-img-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg, 
+    rgba(18, 18, 20, 0.08) 0%, 
+    transparent 35%, 
+    transparent 65%, 
+    rgba(18, 18, 20, 0.65) 100%
+  );
+  pointer-events: none;
+}
+
+/* Floating Champagne-Gold Artisan Seal */
+.jea-about-floating-seal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: rgba(255, 253, 249, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  padding: 7px 16px;
+  border-radius: 30px;
+  box-shadow: 0 8px 22px rgba(109, 16, 40, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6D1028;
+  z-index: 3;
+}
+
+.jea-about-seal-sparkle {
+  color: #d4af37;
+  font-size: 0.8rem;
+}
+
+/* Bottom corner caption label on image */
+.jea-about-img-caption {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  right: 20px;
+  z-index: 3;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.jea-about-caption-label {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.jea-about-caption-sub {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f7e7ce;
+  font-weight: 500;
+}
+
+/* Small luxury gold geometric accent badge on bottom-right of frame */
+.jea-about-corner-badge {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  background: #6D1028;
+  color: #FFFDF9;
+  border: 1px solid #d4af37;
+  border-radius: 12px;
+  padding: 8px 14px;
+  box-shadow: 0 10px 24px rgba(74, 7, 24, 0.28);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jea-about-badge-year {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #f7e7ce;
+  line-height: 1;
+}
+
+.jea-about-badge-text {
+  font-family: var(--font-sans);
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 253, 249, 0.85);
+  margin-top: 3px;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: BRAND STORY CONTENT
+   ========================================================================== */
+
+.jea-about-content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2.75rem;
+}
+
+/* Eyebrow / Small Label */
+.jea-about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #6D1028;
+  margin-bottom: 1.25rem;
+}
+
+.jea-about-eyebrow-line {
+  width: 28px;
+  height: 1.5px;
+  background: linear-gradient(90deg, #aa820a, #d4af37);
+  display: inline-block;
+}
+
+.jea-about-eyebrow-sparkle {
+  color: #d4af37;
+  font-size: 0.85rem;
+}
+
+/* Main Heading */
+.jea-about-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.35rem, 3.8vw, 3.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #121214;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.015em;
+}
+
+.jea-about-heading-lead {
+  display: block;
+  font-weight: 400;
+  color: #1a1a1c;
+}
+
+.jea-about-heading-accent {
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+  background: linear-gradient(135deg, #6D1028 0%, #9f1239 60%, #aa820a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Descriptions */
+.jea-about-description-lead {
+  font-family: var(--font-sans);
+  font-size: 1.04rem;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #4f4d56;
+  max-width: 540px;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.jea-about-description-secondary {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #6e6d7a;
+  max-width: 520px;
+  margin-bottom: 2.25rem;
+  letter-spacing: 0.01em;
+}
+
+/* Discover Our Story CTA Button */
+.jea-about-btn-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.jea-about-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #6D1028;
+  color: #FFFDF9;
+  padding: 15px 34px;
+  border-radius: 40px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border: 1px solid #6D1028;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 10px 25px -5px rgba(109, 16, 40, 0.35);
+  text-decoration: none;
+}
+
+.jea-about-btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  transition: left 0.75s ease;
+}
+
+.jea-about-btn-primary:hover {
+  background-color: #4a0718;
+  border-color: #aa820a;
+  color: #f7e7ce;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -4px rgba(109, 16, 40, 0.45);
+}
+
+.jea-about-btn-primary:hover::before {
+  left: 100%;
+}
+
+.jea-about-btn-primary .btn-arrow-icon {
+  font-size: 1.05rem;
+  transition: transform 0.3s ease;
+}
+
+.jea-about-btn-primary:hover .btn-arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Secondary Atelier Link */
+.jea-about-btn-link {
+  background: transparent;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #aa820a;
+  cursor: pointer;
+  padding: 12px 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.25s ease;
+  position: relative;
+}
+
+.jea-about-btn-link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background-color: rgba(170, 130, 10, 0.5);
+  transition: background-color 0.25s ease, width 0.25s ease;
+}
+
+.jea-about-btn-link:hover {
+  color: #6D1028;
+}
+
+.jea-about-btn-link:hover::after {
+  background-color: #6D1028;
+}
+
+/* ==========================================================================
+   BRAND VALUES (3 VALUE ITEMS)
+   ========================================================================== */
+
+.jea-about-values-wrapper {
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  position: relative;
+}
+
+.jea-about-values-badge-top {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFFDF9;
+  padding: 0 20px;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #aa820a;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.jea-about-value-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(237, 232, 227, 0.9);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  height: 100%;
+}
+
+.jea-about-value-item:hover {
+  background: #ffffff;
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 16px 36px -10px rgba(109, 16, 40, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.jea-about-value-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(247, 231, 206, 0.5) 0%, rgba(255, 253, 249, 0.9) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: #6D1028;
+  font-size: 1.35rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.12);
+}
+
+.jea-about-value-item:hover .jea-about-value-icon-box {
+  background: #6D1028;
+  color: #f7e7ce;
+  border-color: #aa820a;
+  transform: scale(1.06);
+}
+
+.jea-about-value-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #22030b;
+  margin-bottom: 0.65rem;
+}
+
+.jea-about-value-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #6e6d7a;
+  margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .jea-about-section {
+    padding: 2.5rem 2rem 2rem 2rem;
+  }
+  .jea-about-content-col {
+    padding-left: 1.75rem;
+  }
+  .jea-about-heading {
+    font-size: 2.85rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .jea-about-section {
+    padding: 2.25rem 1.5rem 2rem 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 20px;
+  }
+  .jea-about-image-col {
+    margin-bottom: 2.25rem;
+  }
+  .jea-about-content-col {
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+  .jea-about-eyebrow {
+    justify-content: center;
+  }
+  .jea-about-description-lead,
+  .jea-about-description-secondary {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .jea-about-btn-group {
+    justify-content: center;
+  }
+  .jea-about-values-wrapper {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .jea-about-section {
+    padding: 1.75rem 1.25rem;
+    border-radius: 16px;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .jea-about-image-stage {
+    max-width: 100%;
+  }
+  .jea-about-gold-frame {
+    display: none; /* keep mobile clean and prevent any viewport overflow */
+  }
+  .jea-about-corner-badge {
+    bottom: -8px;
+    right: 8px;
+    padding: 6px 12px;
+  }
+  .jea-about-heading {
+    font-size: 2.2rem;
+  }
+  .jea-about-description-lead {
+    font-size: 0.96rem;
+  }
+  .jea-about-description-secondary {
+    font-size: 0.88rem;
+  }
+  .jea-about-value-item {
+    padding: 1.35rem 1.15rem;
+    text-align: center;
+    align-items: center;
+  }
+  .jea-about-value-icon-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,387 @@
+/* ==========================================================================
+   JEA JEWELLERY — DEDICATED ABOUT US & STORY PAGE
+   ========================================================================== */
+
+.jea-about-page {
+  position: relative;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  animation: jeaPageFadeIn 0.4s ease;
+}
+
+@keyframes jeaPageFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Breadcrumb Navigation */
+.jea-about-page-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7b7886;
+}
+
+.jea-about-back-btn {
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #6D1028;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  transition: all 0.2s ease;
+}
+
+.jea-about-back-btn:hover {
+  background: rgba(109, 16, 40, 0.08);
+  color: #4a0718;
+}
+
+.jea-about-nav-separator {
+  color: #d4af37;
+}
+
+.jea-about-nav-current {
+  color: #1a1a1c;
+  font-weight: 600;
+}
+
+/* Page Hero Header */
+.jea-about-page-hero {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 2.75rem auto;
+}
+
+.jea-about-page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #6D1028;
+  margin-bottom: 1rem;
+}
+
+.jea-about-page-sparkle {
+  color: #d4af37;
+  font-size: 0.85rem;
+}
+
+.jea-about-page-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 4.2vw, 3.85rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #1a1a1c;
+  margin-bottom: 1rem;
+  letter-spacing: -0.015em;
+}
+
+.jea-about-page-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #5c5a65;
+  max-width: 640px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.jea-about-page-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.jea-about-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.45), transparent);
+}
+
+.jea-about-divider-gem {
+  color: #aa820a;
+  font-size: 0.85rem;
+}
+
+/* Editorial Story Section */
+.jea-about-story-section {
+  background: #FFFDF9;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 20px;
+  padding: 2.75rem 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 16px 40px -10px rgba(74, 7, 24, 0.05);
+}
+
+.jea-about-hero-image-stage {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.jea-about-page-gold-frame {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.jea-about-hero-image-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #faf7f2;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 20px 45px -10px rgba(34, 3, 11, 0.15);
+  z-index: 2;
+}
+
+.jea-about-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.jea-about-hero-img-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.75rem 1.25rem 1rem 1.25rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(18, 18, 20, 0.75) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #ffffff;
+}
+
+.jea-about-overlay-tag {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #f7e7ce;
+  text-transform: uppercase;
+}
+
+.jea-about-overlay-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+/* Story Content Right Column */
+.jea-about-story-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jea-about-mini-tag {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #6D1028;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.jea-about-story-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1a1a1c;
+  margin-bottom: 1.25rem;
+}
+
+.jea-about-story-text {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #5c5a65;
+  margin-bottom: 1.15rem;
+}
+
+.jea-about-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Craftsmanship Section */
+.jea-craft-section {
+  background: #ffffff;
+  border: 1px solid rgba(237, 232, 227, 0.9);
+  border-radius: 20px;
+  padding: 2.75rem 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.jea-craft-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 2.65rem);
+  color: #1a1a1c;
+  margin-bottom: 0.75rem;
+}
+
+.jea-craft-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: #6e6d7a;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+.jea-craft-card {
+  height: 100%;
+  background: #FFFDF9;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.jea-craft-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 12px 28px -8px rgba(74, 7, 24, 0.08);
+}
+
+.jea-craft-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(247, 231, 206, 0.5) 0%, rgba(255, 253, 249, 0.9) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6D1028;
+  font-size: 1.25rem;
+  margin-bottom: 1.15rem;
+}
+
+.jea-craft-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #22030b;
+  margin-bottom: 0.6rem;
+}
+
+.jea-craft-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #6e6d7a;
+  margin: 0;
+}
+
+/* Brand Values on About Page */
+.jea-values-section {
+  position: relative;
+  background: #FFFDF9;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 20px;
+  padding: 3rem 2.25rem 2.5rem 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Bottom Banner */
+.jea-about-bottom-banner {
+  background: linear-gradient(135deg, rgba(247, 231, 206, 0.35) 0%, rgba(255, 253, 249, 0.95) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.jea-about-bottom-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #aa820a, #6D1028, #aa820a);
+}
+
+.jea-bottom-banner-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3vw, 2.4rem);
+  font-weight: 500;
+  color: #22030b;
+  margin-bottom: 0.65rem;
+}
+
+.jea-bottom-banner-desc {
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  color: #6e6d7a;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .jea-about-story-section {
+    padding: 2rem 1.5rem;
+  }
+  .jea-about-hero-image-stage {
+    margin-bottom: 2rem;
+  }
+  .jea-craft-section,
+  .jea-values-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .jea-about-page-gold-frame {
+    display: none;
+  }
+  .jea-about-story-section,
+  .jea-craft-section,
+  .jea-values-section,
+  .jea-about-bottom-banner {
+    padding: 1.5rem 1.15rem;
+    border-radius: 16px;
+    margin-bottom: 1.75rem;
+  }
+}

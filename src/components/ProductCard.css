@@ -1,0 +1,305 @@
+/* ==========================================================================
+   JEA PRODUCT CARD STYLES
+   ========================================================================== */
+
+.jea-product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 
+    0 10px 30px -10px rgba(74, 7, 24, 0.05),
+    0 2px 8px -2px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.jea-product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 
+    0 24px 50px -12px rgba(74, 7, 24, 0.12),
+    0 6px 18px -4px rgba(0, 0, 0, 0.06);
+}
+
+/* Image Stage */
+.jea-product-image-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  background-color: #faf7f2;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.jea-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.jea-product-card:hover .jea-product-img {
+  transform: scale(1.06);
+}
+
+.jea-product-image-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 2, 8, 0.35) 0%,
+    transparent 28%,
+    transparent 65%,
+    rgba(20, 2, 8, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+/* Top bar: Badge & Wishlist */
+.jea-product-topbar {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.jea-product-badge {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #24030c;
+  background: rgba(255, 253, 249, 0.92);
+  backdrop-filter: blur(6px);
+  padding: 4px 10px;
+  border-radius: 30px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.jea-product-wishlist-btn {
+  pointer-events: auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: #3b3a40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.jea-product-wishlist-btn:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+  color: #9f1239;
+  border-color: #9f1239;
+}
+
+.jea-product-wishlist-btn.is-active {
+  background: #9f1239;
+  color: #ffffff;
+  border-color: #9f1239;
+}
+
+.jea-product-wishlist-btn.is-active .jea-heart-icon {
+  fill: #ffffff;
+}
+
+.jea-heart-icon {
+  font-size: 1.05rem;
+  transition: transform 0.2s ease;
+}
+
+/* Quick View floating bar */
+.jea-product-quick-view-bar {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  color: #24030c;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.jea-product-card:hover .jea-product-quick-view-bar {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Card Body / Info */
+.jea-product-info {
+  padding: 1.25rem 1.35rem 1.35rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #ffffff;
+}
+
+.jea-product-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+}
+
+.jea-product-subcategory {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aa820a;
+}
+
+.jea-product-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #4a0718;
+}
+
+.jea-star-icon {
+  color: #d4af37;
+  font-size: 0.75rem;
+}
+
+.jea-product-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #1a1a1c;
+  margin: 0 0 0.75rem 0;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 3.2rem;
+}
+
+.jea-product-title:hover {
+  color: #9f1239;
+}
+
+.jea-product-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 1.15rem;
+  padding-bottom: 0.95rem;
+  border-bottom: 1px solid rgba(235, 230, 222, 0.85);
+}
+
+.jea-product-price {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #740f29;
+  letter-spacing: -0.01em;
+}
+
+.jea-product-taxes {
+  font-size: 0.65rem;
+  color: #8c8996;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* Action Buttons */
+.jea-product-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.jea-product-btn-details {
+  background: #faf8f5;
+  border: 1px solid #e2ddd6;
+  border-radius: 24px;
+  padding: 8px 12px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #24030c;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jea-product-btn-details:hover {
+  background: #ffffff;
+  border-color: #aa820a;
+  color: #9f1239;
+}
+
+.jea-product-btn-add {
+  background: linear-gradient(135deg, #380512 0%, #680d24 60%, #9f1239 100%);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 24px;
+  padding: 8px 12px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(104, 13, 36, 0.25);
+}
+
+.jea-product-btn-add:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #24030c 0%, #4a0718 60%, #740f29 100%);
+  border-color: #d4af37;
+  box-shadow: 0 8px 20px rgba(104, 13, 36, 0.35);
+  color: #f7e7ce;
+}
+
+.jea-bag-btn-icon {
+  font-size: 0.95rem;
+}
+
